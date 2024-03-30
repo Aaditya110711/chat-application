@@ -1,8 +1,8 @@
 from django.contrib import admin
-from chatapp.models import Profile
+from chatapp.models import Friend
 # Register your models here.
 
-@admin.register(Profile)
-class ProfileAdmin(admin.ModelAdmin):
-    list_display = ['id', 'name']
-    readonly_fields = ['preview']
+
+# class FriendAdmin(admin.ModelAdmin):
+#     list_display = ['id', 'profile.name']
+admin.site.register(Friend)

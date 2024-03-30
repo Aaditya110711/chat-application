@@ -42,7 +42,8 @@ ul.list-inline.text-left.d-inline-block.float-left {
 }
 
 .chat-list-box ul li img {
-  border-radius: 50px;
+  max-width: 100px;
+  max-height: 40px;
 }
 
 .message-box {
@@ -228,6 +229,7 @@ span.chat-time {
   .message-box {
     display: none;
     position: relative;
-    top: -60%;
+    top: -100%;
+    z-index: 100;
   }
 }

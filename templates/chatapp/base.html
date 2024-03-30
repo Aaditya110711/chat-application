@@ -4,6 +4,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/png" href="{% static 'imgs/web-icon.png' %}"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
@@ -17,30 +18,6 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ></script>
-    <script>
-        $("#attach").click(function(){
-            $(".attachement").toggle();
-          });
-      </script>
-      <script>
-        $("#dset").click(function(){
-            $(".setting-drop").toggle('1000');
-          });
-      </script>
-      
-      <script>
-      $(document).ready(function(){
-      $(".flip").click(function(){
-          $(".message-box").show("slide", { direction: "right" }, 10000);
-      });
-  });
-   </script>
-   <script>
-      $(document).ready(function(){
-      $("#back").click(function(){
-          $(".message-box").hide("slide", { direction: "left" }, 10000);
-      });
-  });
-   </script>
+    <script src="{% static 'js/script.js' %}"></script>
   </body>
 </html>
