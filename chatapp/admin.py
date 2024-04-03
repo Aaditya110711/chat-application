@@ -1,8 +1,10 @@
 from django.contrib import admin
-from chatapp.models import Friend
+from chatapp.models import (Friend, ChatMessage)
 # Register your models here.
 
 
-# class FriendAdmin(admin.ModelAdmin):
-#     list_display = ['id', 'profile.name']
-admin.site.register(Friend)
+@admin.register(Friend)
+class FriendAdmin(admin.ModelAdmin):
+    list_display = ['id', 'profile']
+
+admin.site.register(ChatMessage)

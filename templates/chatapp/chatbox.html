@@ -1,14 +1,18 @@
 {% extends "chatapp/index.html" %} 
-
+{% load static %}
 {% block chatbox %}
 <div class="col-md-8">
   <div class="message-box">
     <div class="head-box-1">
       <ul class="msg-box list-inline text-left d-inline-block float-left">
-        <li><i class="fas fa-arrow-left" id="back"></i></li>
         <li>
-          <img src="https://i.ibb.co/KDZymW5/p6.png" alt="" width="40px" />
-          <span> Naveen mandwariya </span>
+          <a href="{% url "chatapp:chat" %}" class="text-black">
+            <i class="fas fa-arrow-left" id="back"></i>
+          </a>
+        </li>
+        <li>
+          <img src="{{friend.profile.pic.url}}" alt="profile image" class="img-fluid" width="40px" />
+          <span>{{friend.profile.name}}</span>
         </li>
       </ul>
 
@@ -21,185 +25,94 @@
         </li>
         <li>
           <a href="#" id="dset"> <i class="fas fa-ellipsis-v"></i> </a>
-          <div class="setting-drop">
-            <ul class="list-inline">
-              <li><a href="#"> My Profile</a></li>
-              <li><a href="#"> Setting </a></li>
-              <li><a href="#"> Privacy Policy </a></li>
-              <li><a href="#"> Hidden chat </a></li>
-              <li><a href="#"> Logout </a></li>
-            </ul>
-          </div>
         </li>
       </ul>
     </div>
 
     <div class="msg_history">
-      <div class="incoming_msg">
-        <div class="incoming_msg_img">
-          <img
-            src="https://ptetutorials.com/images/user-profile.png"
-            alt="sunil"
-          />
-        </div>
-        <div class="received_msg">
-          <div class="received_withd_msg">
-            <p>Hi, How are you ?</p>
-            <span class="time_date"> 11:01 AM | June 9</span>
-          </div>
-        </div>
-      </div>
-      <div class="outgoing_msg">
-        <div class="sent_msg">
-          <p>Hello, i am fine thankyou, what about you ?</p>
-          <span class="time_date"> 11:01 AM | June 9</span>
-        </div>
-      </div>
-      <div class="incoming_msg">
-        <div class="incoming_msg_img">
-          <img
-            src="https://ptetutorials.com/images/user-profile.png"
-            alt="sunil"
-          />
-        </div>
-        <div class="received_msg">
-          <div class="received_withd_msg">
-            <p>I am also good thankyou!</p>
-            <span class="time_date"> 11:01 AM | Yesterday</span>
-          </div>
-        </div>
-      </div>
-      <div class="incoming_msg">
-        <div class="incoming_msg_img">
-          <img
-            src="https://ptetutorials.com/images/user-profile.png"
-            alt="sunil"
-          />
-        </div>
-        <div class="received_msg">
-          <div class="received_withd_msg">
-            <p>I am also good thankyou!</p>
-            <span class="time_date"> 11:01 AM | Yesterday</span>
-          </div>
-        </div>
-      </div>
-      <div class="incoming_msg">
-        <div class="incoming_msg_img">
-          <img
-            src="https://ptetutorials.com/images/user-profile.png"
-            alt="sunil"
-          />
-        </div>
-        <div class="received_msg">
-          <div class="received_withd_msg">
-            <p>I am also good thankyou!</p>
-            <span class="time_date"> 11:01 AM | Yesterday</span>
-          </div>
-        </div>
-      </div>
-      <div class="incoming_msg">
-        <div class="incoming_msg_img">
-          <img
-            src="https://ptetutorials.com/images/user-profile.png"
-            alt="sunil"
-          />
-        </div>
-        <div class="received_msg">
-          <div class="received_withd_msg">
-            <p>I am also good thankyou!</p>
-            <span class="time_date"> 11:01 AM | Yesterday</span>
-          </div>
-        </div>
-      </div>
-      <div class="incoming_msg">
-        <div class="incoming_msg_img">
-          <img
-            src="https://ptetutorials.com/images/user-profile.png"
-            alt="sunil"
-          />
-        </div>
-        <div class="received_msg">
-          <div class="received_withd_msg">
-            <p>I am also good thankyou!</p>
-            <span class="time_date"> 11:01 AM | Yesterday</span>
-          </div>
-        </div>
-      </div>
-      <div class="incoming_msg">
-        <div class="incoming_msg_img">
-          <img
-            src="https://ptetutorials.com/images/user-profile.png"
-            alt="sunil"
-          />
-        </div>
-        <div class="received_msg">
-          <div class="received_withd_msg">
-            <p>I am also good thankyou!</p>
-            <span class="time_date"> 11:01 AM | Yesterday</span>
-          </div>
-        </div>
-      </div>
-      <div class="incoming_msg">
-        <div class="incoming_msg_img">
-          <img
-            src="https://ptetutorials.com/images/user-profile.png"
-            alt="sunil"
-          />
-        </div>
-        <div class="received_msg">
-          <div class="received_withd_msg">
-            <p>I am also good thankyou!</p>
-            <span class="time_date"> 11:01 AM | Yesterday</span>
-          </div>
-        </div>
-      </div>
-      <div class="incoming_msg">
-        <div class="incoming_msg_img">
-          <img
-            src="https://ptetutorials.com/images/user-profile.png"
-            alt="sunil"
-          />
-        </div>
-        <div class="received_msg">
-          <div class="received_withd_msg">
-            <p>I am also good thankyou!</p>
-            <span class="time_date"> 11:01 AM | Yesterday</span>
-          </div>
-        </div>
-      </div>
-      <div class="outgoing_msg">
-        <div class="sent_msg">
-          <p>ok</p>
-          <span class="time_date"> 11:01 AM | Today</span>
-        </div>
-      </div>
-      <div class="incoming_msg">
-        <div class="incoming_msg_img">
-          <img
-            src="https://ptetutorials.com/images/user-profile.png"
-            alt="sunil"
-          />
-        </div>
-        <div class="received_msg">
-          <div class="received_withd_msg">
-            <p>What's going on ?</p>
-            <span class="time_date"> 11:01 AM | Today</span>
-          </div>
-        </div>
-      </div>
+      
     </div>
 
     <div class="send-message">
-      <form action="" method="">
+      <form id="send_messageForm">
         <textarea
           cols="10"
           rows="2"
           class="form-control"
+          id="text_msgg"
           placeholder="Type your message here ..."
         >
         </textarea>
+        <button type="submit" class="btn btn-primary" id="submit_chat">Send</button>
       </form>
     </div>
   </div>
 </div>
+{{ room_name|json_script:"room-name" }}
+    <script>
+        const roomName = '{{ room_name }}'
+
+        const chatSocket = new WebSocket(
+            'ws://'
+            + window.location.host
+            + '/ws/chat/'
+            + roomName
+            + '/'
+        );
+
+        chatSocket.onopen = function (e) {
+            console.log('WebSocket connection established.');
+        };
+
+        chatSocket.onclose = function(e) {
+            console.error('Chat socket closed unexpectedly');
+        };
+
+        chatSocket.onmessage = function(e) {
+          console.log("MEssage Received,...............");
+        }
+
+        document.querySelector('#text_msgg').onkeyup = function(e) {
+            if (e.key === 'Enter') {  // enter, return
+                document.querySelector('#submit_chat').click();
+            }
+        };
+
+        document.querySelector('#submit_chat').onclick = function(e) {
+            e.preventDefault()
+            const messageInputDom = document.querySelector('#text_msgg');
+            const message = messageInputDom.value;
+            chatSocket.send(JSON.stringify({
+                'message': message,
+                'sender' : '{{request.user}}'
+            }));
+            messageInputDom.value = '';
+        };
+
+        chatSocket.addEventListener("message", (e) =>{
+          const messageData = JSON.parse(e.data)
+          console.log(messageData);
+
+          var sender = messageData['sender'];
+          var message = messageData['message'];
+          
+        // Here's where we append the message to the chatbox.
+          var messageDiv = document.querySelector('.msg_history');
+          if (sender != '{{request.user}}') { // assuming you have a variable `currentUser` to hold the current user's name
+              messageDiv.innerHTML += `<div class="incoming_msg">
+                                          <div class="received_withd_msg">
+                                            <p>${message} - <b>${sender}</b></p>
+                                            <span class="time_date"> 11:01 AM | June 9</span>
+                                          </div>
+                                        </div>`;
+          } else {
+              messageDiv.innerHTML += `<div class="outgoing_msg">
+                                          <div class="sent_msg">
+                                            <p>${message}</p>
+                                            <span class="time_date"> 11:01 AM | June 9</span>
+                                          </div>
+                                        </div>`;
+          }
+        })
+    </script>
 {% endblock chatbox %}

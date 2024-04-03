@@ -107,6 +107,7 @@ span.chat-time {
 .msg_history {
   padding: 10px;
   max-height: 70vh;
+  min-height: 70vh;
   overflow: overlay;
 }
 .incoming_msg {
@@ -142,11 +143,6 @@ span.chat-time {
   display: block;
   font-size: 12px;
   margin: 8px 0 0;
-}
-.incoming_msg_img img {
-  width: 100%;
-  border-radius: 50px;
-  float: left;
 }
 .outgoing_msg {
   overflow: hidden;
@@ -203,26 +199,13 @@ span.chat-time {
   padding: 15px;
   background: #f5f5f5;
 }
+.send-message form {
+  display: flex;
+}
 .send-message textarea:focus {
   box-shadow: none;
   outline: none;
   border-color: #ddd;
-}
-.send-message ul li {
-  display: -webkit-inline-box;
-  padding-left: 15px;
-}
-.send-message ul li i {
-  color: #0056b3;
-}
-.send-message ul li a {
-  color: #0056b3;
-}
-.send-message ul {
-  position: absolute;
-  right: 45px;
-  top: 88%;
-  border-left: 1px solid #9c9a9a;
 }
 
 @media only screen and (max-width: 800px) {

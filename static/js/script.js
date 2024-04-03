@@ -1,15 +1,33 @@
-// $("#attach").click(function () {
-//   $(".attachement").toggle();
-// });
 $("#dset").click(function () {
   $(".setting-drop").toggle("1000");
 });
-$(document).ready(function(){
-    $(".flip").click(function(){
-        $(".message-box").show("slide", { direction: "right" }, 10000);
-    });
+$(window).on("load", function () {
+  document.querySelector('#text_msgg').value = '';
 
-    $("#back").click(function(){
-        $(".message-box").hide("slide", { direction: "left" }, 10000);
-    });
 });
+
+
+// $("#send_messageForm").submit(function (e) {
+//   e.preventDefault();
+//   var csrftoken = $("[name=csrfmiddlewaretoken]").val();
+
+//   console.log("object:::::::::::::;");
+
+//   let formData = {
+//   };
+//   url = "http://127.0.0.1:8000/chats/send_msg";
+//   $.ajax({
+//     headers: { "X-CSRFToken": csrftoken },
+//     type: "POST",
+//     url: url,
+//     data: formData,
+//     dataType: "json",
+//     encode: true,
+//   })
+//     .done(function (data) {
+//       console.log(data);
+//     })
+//     .fail(function (error) {
+//       console.log(error);
+//     });
+// });

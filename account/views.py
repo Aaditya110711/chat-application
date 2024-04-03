@@ -82,7 +82,6 @@ def forgot_password_view(request):
             username_or_email = form.cleaned_data['username_or_email']
             user = get_user_model().objects.get(**username_or_email)
             code = get_random_string(20)
-            print("------------------======================::::::",user)
             otp = OtpCode(code=code, user=user, email=user.email)
             otp.save()
 
@@ -90,7 +89,6 @@ def forgot_password_view(request):
                 send_reset_password_code(user.email, code)
             except Exception as e:
                 otp.delete()
-                print(e,"_++++++_______++++++++++++_______")
                 messages.error(request, _('Failed while sending code!'))
             else:
                 messages.success(request, _(

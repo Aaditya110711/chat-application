@@ -35,6 +35,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'channels',
+    'daphne',
     'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -75,7 +77,18 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'web_chat_application.wsgi.application'
+# WSGI_APPLICATION = 'web_chat_application.wsgi.application'
+ASGI_APPLICATION = 'web_chat_application.asgi.application'
+
+
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels_redis.core.RedisChannelLayer',
+        'CONFIG': {
+            'hosts': [('127.0.0.1', 6379)],
+        }
+    }
+}
 
 
 # Database
