@@ -33,10 +33,6 @@ Install Dependencies:
 
     pip install -r requirements.txt
 
-Install Dependencies:
-
-    pip install -r requirements.txt
-
 Set Up Environment Variables:
 
 - Create a .env file in the project root directory and add the following variables:
